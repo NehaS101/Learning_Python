@@ -10,3 +10,6 @@ res.status(500).send("mongodb error")
 
 
 }
+module.exports={
+    errorHandle
+}
