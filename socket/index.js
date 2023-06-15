@@ -11,12 +11,14 @@ io.on('connection',(socket)=>{
     console.log('client connected '+socket.id);
 
     socket.on('specific',data=>{
-        const email = data.email;
-        io.to(email).emit('message',"hello world");
-
+      var  email = data.email;
+     
+      if(email === "neha@gmail.com"){
+        io.to(email).emit('mssg',`hello how are you ${email}`);
+    }
     })
 
-    
+   
     
     socket.on('disconnect', () => {
         console.log('A client disconnected: ' + socket.id);
