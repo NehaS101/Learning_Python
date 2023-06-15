@@ -10,8 +10,13 @@ const io = socketIo(server);
 io.on('connection',(socket)=>{
     console.log('client connected '+socket.id);
 
-    const targetClientID = "Lee8GqDjnosdhrjhAAAD";
-    io.to(targetClientID).emit('message',"hello world");
+    socket.on('specific',data=>{
+        const email = data.email;
+        io.to(email).emit('message',"hello world");
+
+    })
+
+    
     
     socket.on('disconnect', () => {
         console.log('A client disconnected: ' + socket.id);
