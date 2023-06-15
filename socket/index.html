@@ -9,7 +9,11 @@
     <script>
         const socket = io("http://localhost:3000/", { transports: ["websocket"] })
     const emailAdd= document.getElementById("email");
-    const submit = document.getElementById("")
+    const submit = document.getElementById("submit");
+
+    submit.addEventListener("click",()=>{
+        socket.emit('specific',{email:emailAdd.value});
+    })
         socket.on("message",(msg)=>{
         console.log(msg);
     })
