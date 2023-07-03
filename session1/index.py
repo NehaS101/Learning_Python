@@ -31,3 +31,9 @@ Age=int(input("enter your age : "))
 temp=float(input("enter temperature of your city : "))
 print(f"hello,this is {full_name} and her age is {Age} and temperature of her city is {temp}")
 
+try:
+    num = int(input("Enter your num"))
+    print(f"your mobile no. is {num}")
+
+except ValueError:
+    print("Invalid input")    
