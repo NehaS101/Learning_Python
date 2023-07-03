@@ -23,3 +23,11 @@ news="   World of the future  "
 print(news.upper())
 print(news.lower())
 print(news.strip())
+
+
+#user inputs and error handling
+full_name = input("enter your name : ")
+Age=int(input("enter your age : "))
+temp=float(input("enter temperature of your city : "))
+print(f"hello,this is {full_name} and her age is {Age} and temperature of her city is {temp}")
+
