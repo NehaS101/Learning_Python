@@ -28,3 +28,13 @@ Write a program that calculates the factorial of a given number.
 Prompt the user to enter a positive integer, and then display its factorial. 
 The factorial of a number is the product of all positive integers less than or equal to that number.
 '''
+
+def fact(num):
+    fac=1
+    for i in range(1,num+1):
+        fac = fac*i
+
+    return fac
+
+res=fact(3)
+print(res)    
