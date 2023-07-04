@@ -10,3 +10,18 @@ elif temp<15:
     print("its cold")
 else:
     print("moderate temperature")        
+
+#for and while loop
+
+fruits=["apple", "orange", "banana", "grapes"]
+
+#for loop
+for key in fruits:
+    print(key)
+
+#while loop
+
+i=0
+while i<10:
+    print(i)
+    i=i+2     
