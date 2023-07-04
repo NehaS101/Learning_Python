@@ -25,3 +25,16 @@ i=0
 while i<10:
     print(i)
     i=i+2     
+
+#functions
+
+def greet():
+    print("greetings")
+
+greet()    
+
+def sum(a,b):
+    return a+b
+
+output = sum(5,7)
+print(output)
