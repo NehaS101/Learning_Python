@@ -1,6 +1,6 @@
 #OOP(object oriented programming)
 
-#classes
+#_______classes_______#
 
 #class definition
 class Person:
@@ -17,7 +17,7 @@ person1 = Person("neha",19)
 person1.greet()
 
 
-#encapsulation
+#_______encapsulation_______#
 
 #class constructor
 class BankAccount:
@@ -44,3 +44,26 @@ account=BankAccount("1234",2000)
 account.deposit(500)
 account.withdraw(300)
 account.getBalance()
+
+
+#_______Inheritance_______#
+
+# Parent class
+class Animal:
+    def __init__(self,name):
+        self.name=name
+
+    def speak(self):
+        print("generic sound")    
+
+# Child class
+class Dog(Animal):
+    def speak(self):
+        print("woof")    
+
+animal = Animal("generic animal")
+dog = Dog("Buddy")
+
+print(animal.name)
+print(dog.name)
+dog.speak()
