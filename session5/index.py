@@ -67,3 +67,31 @@ dog = Dog("Buddy")
 print(animal.name)
 print(dog.name)
 dog.speak()
+
+
+#_______Polymorphism______#
+
+#parent class
+class Shape:
+    def area(self):
+        pass #No code implemented yet
+
+#child classes
+class Circle(Shape):
+    def __init__(self,r):
+        self.r=r
+
+    def area(self):
+        return 3.14 * self.r ** 2
+    
+class Sphere(Shape):
+    def __init__(self,len):
+        self.len=len
+
+    def area(self):
+        return self.len**2
+
+shapes = [Circle(5),Sphere(4)]
+for shape in shapes:
+    print(shape.area())            
+        
