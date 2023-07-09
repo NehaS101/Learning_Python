@@ -26,4 +26,15 @@ try:
     age=110
     validate_age(age)
 except ValueError as e: 
-    print(e)       
+    print(e) 
+
+#"finally" block
+
+try:
+    file=open("data.txt","r")
+    content= file.read()
+    print(content)
+except FileNotFoundError:
+    print("File not found")
+finally:
+    file.close()                  
