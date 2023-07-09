@@ -14,4 +14,16 @@ except ValueError:
 except ZeroDivisionError:
     print("can't divide by zero")        
 
+#Raising custom exceptions
+
+def validate_age(age):
+    if age<0:
+        raise ValueError("age can't be negative")
+    elif age>100:
+        raise ValueError("age is too high")
     
+try:
+    age=110
+    validate_age(age)
+except ValueError as e: 
+    print(e)       
